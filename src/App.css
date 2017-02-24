@@ -1,24 +1,135 @@
 .App {
-  text-align: center;
+    position: relative;
 }
-
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
-
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #ededed;
+    height: 32px;
+    padding: 15px;
+}
+.App-header h1 {
+    margin: 0 0 0 50px;
+    font-size: 24px;
+    color: #092F79;
+    line-height: 32px;
 }
 
-.App-intro {
-  font-size: large;
+.App-body {
+    padding: 15px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* =========== Forms ========== */
+input {
+    border: 1px solid rgba(0,0,0,0.45);
+    border-radius: 4px;
+}
+button {
+    border: 1px solid rgba(0,0,0,0.45);
+    border-radius: 4px;
+    background-color: rgba(233,233,233,0.65);
+    color: black;
+    cursor: pointer;
+}
+.btn-primary {
+    color: white;
+    background-color: #4E7CC6;
+}
+.btn-primary:hover {
+    background-color: rgba(78, 124, 198, 0.66);
+}
+.btn-danger {
+    color: white;
+    background-color: rgba(169, 6, 11, 0.74);
+}
+.btn-danger:hover {
+    background-color: rgba(169, 6, 11, 0.46);
+}
+
+
+/* =========== Create form ========== */
+.App-body .create-container {
+    margin-bottom: 25px;
+}
+.App-body .create-container input {
+    height: 32px;
+    padding: 2px 4px;
+    font-size: 18px;
+}
+.App-body .create-container button[type="submit"] {
+    margin-left: 10px;
+    height: 36px;
+    font-size: 18px;
+}
+
+/* =========== Tasks ========== */
+.tasks {
+
+}
+.tasks .task {
+    margin-bottom: 12px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    position: relative;
+    height: 24px;
+    padding: 15px 130px 15px 70px;
+}
+.tasks .task .check {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 42px;
+    height: 24px;
+    line-height: 100%;
+    vertical-align: middle;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgba(0,0,0,0.7);
+}
+.tasks .task .check:hover {
+    color: rgba(0,0,0,0.9);
+}
+.tasks .task .title {
+    font-size: 22px;
+    line-height: 22px;
+}
+.tasks .task .title s {
+    opacity: 0.7;
+}
+.tasks .task .title input {
+    height: 20px;
+    padding: 2px 4px;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 0;
+    width: 100%;
+}
+.tasks .task .actions {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    height: 24px;
+    width: 100px;
+}
+.tasks .task .actions button {
+    height: 40px;
+    width: 40px;
+    margin-left: 6px;
+    line-height: 38px;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.09);
+    -moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.09);
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.09);
+}
+.tasks .task .actions button i {
+    margin-left: -3px;
+    color: white;
 }

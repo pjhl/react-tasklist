@@ -1,0 +1,7 @@
+
+.icon-cancel:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e801'; } /* '' */
+.icon-floppy:before { content: '\e802'; } /* '' */
+.icon-edit:before { content: '\e803'; } /* '' */
+.icon-check:before { content: '\e804'; } /* '' */
+.icon-check-empty:before { content: '\f096'; } /* '' */
