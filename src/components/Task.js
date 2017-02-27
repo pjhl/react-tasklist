@@ -60,7 +60,7 @@ class Task extends Component {
     this.save();
   }
 
-  onKeyUp (e) {
+  onKeyUp(e) {
     if (e.key === 'Escape') {
       // Disable editing
       this.setState({isEdit: false});
@@ -85,7 +85,8 @@ class Task extends Component {
                        placeholder="Введите название задачи"
                        value={this.state.newTitle}
                        onChange={this.onChangeNewTitle.bind(this)}
-                       onKeyUp={this.onKeyUp.bind(this)} />
+                       onKeyUp={this.onKeyUp.bind(this)}
+                       autoFocus="autofocus"/>
               </form>
             )
             : (this.state.isFinished ? <s>{this.state.title}</s> : this.state.title)
