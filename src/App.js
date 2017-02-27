@@ -16,7 +16,7 @@ class App extends Component {
 
   componentWillMount() {
     // Load tasks from localStorage
-    var tasks = localStorage['tasks'];
+    let tasks = localStorage['tasks'];
 
     // Set default items if the state wasn't saved never
     if (tasks === undefined) {
@@ -37,10 +37,21 @@ class App extends Component {
     }
 
     if (tasks && tasks.length > 0) {
-      return this.setState({tasks: tasks});
+      let tesksObj = [];
+      try {
+        tesksObj = JSON.parse(tasks);
+      } catch(e) {
+        console.error(e);
+      }
+      return this.setState({tasks: tesksObj});
     }
 
   }
+  componentWillUpdate (nextProps, nextState) {
+    // Save state to localStorage
+    localStorage['tasks'] = JSON.stringify(nextState.tasks);
+  }
+
 
   destroyHandler(id) {
     this.setState({
@@ -59,7 +70,7 @@ class App extends Component {
           return task;
         }
         // Update task
-        for (var key in attributes) {
+        for (let key in attributes) {
           if (attributes.hasOwnProperty(key)) {
             task[key] = attributes[key];
           }
@@ -72,7 +83,7 @@ class App extends Component {
   }
 
   onAddhandler(title) {
-    var lastId = 0;
+    let lastId = 0;
     this.state.tasks.map(function(task){
       lastId = lastId < task.id ? task.id : lastId;
       return task;

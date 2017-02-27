@@ -29,7 +29,10 @@ class Task extends Component {
   }
 
   onClickFinished() {
-    this.setState({isFinished: !this.state.isFinished});
+    // Say perent to change isFinished
+    this.props.onChangeTask(this.props.id, {
+      isFinished: !this.state.isFinished
+    });
   }
 
   onClickEdit() {
