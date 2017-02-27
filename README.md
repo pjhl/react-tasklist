@@ -9,5 +9,6 @@ This is test project built with react. You can preview it [here](http://react-ta
 ```bash
 git clone https://github.com/pjhl/react-tasklist.git
 cd react-tasklist
+npm install
 npm start
 ```
